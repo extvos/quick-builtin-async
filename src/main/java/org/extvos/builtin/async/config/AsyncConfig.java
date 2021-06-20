@@ -10,7 +10,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author shenmc
+ * @author Mingcai SHEN
  */
 @Configuration
 public class AsyncConfig implements AsyncConfigurer {

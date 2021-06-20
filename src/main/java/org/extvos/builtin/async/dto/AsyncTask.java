@@ -7,7 +7,7 @@ import org.extvos.builtin.async.service.AsyncRunnable;
 import java.io.Serializable;
 
 /**
- * @author shenmc
+ * @author Mingcai SHEN
  */
 public class AsyncTask implements Serializable {
 

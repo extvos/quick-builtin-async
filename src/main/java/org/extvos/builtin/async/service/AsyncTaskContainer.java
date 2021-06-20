@@ -4,7 +4,7 @@ import org.extvos.builtin.async.dto.AsyncTask;
 import org.extvos.restlet.exception.RestletException;
 
 /**
- * @author shenmc
+ * @author Mingcai SHEN
  */
 public interface AsyncTaskContainer {
     /**

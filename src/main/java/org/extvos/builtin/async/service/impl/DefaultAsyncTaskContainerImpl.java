@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.UUID;
 
 /**
- * @author shenmc
+ * @author Mingcai SHEN
  */
 public class DefaultAsyncTaskContainerImpl implements AsyncTaskContainer {
 

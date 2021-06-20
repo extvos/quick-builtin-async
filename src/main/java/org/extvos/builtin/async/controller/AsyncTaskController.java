@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author shenmc
+ * @author Mingcai SHEN
  */
 @RestController
 @Api(tags = {"异步任务"})

@@ -1,7 +1,7 @@
 package org.extvos.builtin.async.service;
 
 /**
- * @author shenmc
+ * @author Mingcai SHEN
  */
 public interface AsyncRunnable {
     /**
