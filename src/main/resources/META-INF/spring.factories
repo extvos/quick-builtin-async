@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.extvos.builtin.async.config.BuiltinAsyncAutoConfigure
+plus.extvos.builtin.async.config.BuiltinAsyncAutoConfigure

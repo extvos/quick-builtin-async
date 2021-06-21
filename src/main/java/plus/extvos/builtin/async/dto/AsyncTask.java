@@ -1,8 +1,8 @@
-package org.extvos.builtin.async.dto;
+package plus.extvos.builtin.async.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import org.extvos.builtin.async.service.AsyncRunnable;
+import plus.extvos.builtin.async.service.AsyncRunnable;
 
 import java.io.Serializable;
 

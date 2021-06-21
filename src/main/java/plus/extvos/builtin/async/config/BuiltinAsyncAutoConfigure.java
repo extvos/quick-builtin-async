@@ -1,7 +1,7 @@
-package org.extvos.builtin.async.config;
+package plus.extvos.builtin.async.config;
 
-import org.extvos.builtin.async.service.AsyncTaskContainer;
-import org.extvos.builtin.async.service.impl.DefaultAsyncTaskContainerImpl;
+import plus.extvos.builtin.async.service.AsyncTaskContainer;
+import plus.extvos.builtin.async.service.impl.DefaultAsyncTaskContainerImpl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -18,9 +18,9 @@ import springfox.documentation.spring.web.plugins.Docket;
  * @author Mingcai SHEN
  */
 @Configuration
-@EntityScan("org.extvos.builtin.async.entity")
-@MapperScan("org.extvos.builtin.async.mapper")
-@ComponentScan(basePackages = "org.extvos.builtin.async")
+@EntityScan("plus.extvos.builtin.async.entity")
+@MapperScan("plus.extvos.builtin.async.mapper")
+@ComponentScan(basePackages = "plus.extvos.builtin.async")
 public class BuiltinAsyncAutoConfigure {
 
     @Bean
@@ -42,7 +42,7 @@ public class BuiltinAsyncAutoConfigure {
                         .version(getClass().getPackage().getImplementationVersion())
                         .build())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.extvos.builtin.async"))
+                .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.async"))
                 .build();
     }
 }

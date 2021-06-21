@@ -1,4 +1,4 @@
-package org.extvos.builtin.async.config;
+package plus.extvos.builtin.async.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
