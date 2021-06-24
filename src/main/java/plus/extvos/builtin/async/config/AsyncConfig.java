@@ -41,7 +41,7 @@ public class AsyncConfig implements AsyncConfigurer {
             atf = new AsyncThreadFactory();
         }
         return new ThreadPoolExecutor(corePoolSize, maxPoolSize,
-                keepAliveTime, TimeUnit.MILLISECONDS, workQueue, atf);
+            keepAliveTime, TimeUnit.MILLISECONDS, workQueue, atf);
     }
 
     public static class AsyncThreadFactory implements ThreadFactory {
