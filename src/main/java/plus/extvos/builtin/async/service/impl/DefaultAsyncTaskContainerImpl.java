@@ -1,17 +1,16 @@
 package plus.extvos.builtin.async.service.impl;
 
+import com.github.benmanes.caffeine.cache.Cache;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import plus.extvos.builtin.async.dto.AsyncTask;
 import plus.extvos.builtin.async.service.AsyncRunnable;
 import plus.extvos.builtin.async.service.AsyncTaskContainer;
 import plus.extvos.restlet.Assert;
 import plus.extvos.restlet.exception.RestletException;
-import com.github.benmanes.caffeine.cache.Cache;
-import com.github.benmanes.caffeine.cache.Caffeine;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-import java.util.UUID;
 
 /**
  * @author Mingcai SHEN
@@ -25,10 +24,10 @@ public class DefaultAsyncTaskContainerImpl implements AsyncTaskContainer {
 
     public DefaultAsyncTaskContainerImpl() {
         taskCache = Caffeine.newBuilder()
-                .expireAfterWrite(Duration.ofMinutes(15L))
-                .maximumSize(1000L)
-                .initialCapacity(100)
-                .build();
+            .expireAfterWrite(Duration.ofMinutes(15L))
+            .maximumSize(1000L)
+            .initialCapacity(100)
+            .build();
         taskCounter = 0L;
     }
 

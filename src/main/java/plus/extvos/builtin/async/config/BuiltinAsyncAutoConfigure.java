@@ -1,13 +1,13 @@
 package plus.extvos.builtin.async.config;
 
-import plus.extvos.builtin.async.service.AsyncTaskContainer;
-import plus.extvos.builtin.async.service.impl.DefaultAsyncTaskContainerImpl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import plus.extvos.builtin.async.service.AsyncTaskContainer;
+import plus.extvos.builtin.async.service.impl.DefaultAsyncTaskContainerImpl;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.Contact;
@@ -33,16 +33,16 @@ public class BuiltinAsyncAutoConfigure {
     @Bean
     public Docket createAsyncDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("异步任务服务")
-                .apiInfo(new ApiInfoBuilder()
-                        .title("异步任务服务")
-                        .description("Builtin Quartz services for generic use.")
-                        .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
-                        .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-async.git")
-                        .version(getClass().getPackage().getImplementationVersion())
-                        .build())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.async"))
-                .build();
+            .groupName("异步任务服务")
+            .apiInfo(new ApiInfoBuilder()
+                .title("异步任务服务")
+                .description("Builtin Quartz services for generic use.")
+                .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
+                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-async.git")
+                .version(getClass().getPackage().getImplementationVersion())
+                .build())
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("plus.extvos.builtin.async"))
+            .build();
     }
 }
