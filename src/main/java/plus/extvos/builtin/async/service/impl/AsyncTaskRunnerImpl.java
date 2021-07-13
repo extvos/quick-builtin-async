@@ -7,7 +7,7 @@ import plus.extvos.builtin.async.dto.AsyncTask;
 import plus.extvos.builtin.async.service.AsyncRunnable;
 import plus.extvos.builtin.async.service.AsyncTaskContainer;
 import plus.extvos.builtin.async.service.AsyncTaskRunner;
-import plus.extvos.restlet.exception.RestletException;
+import plus.extvos.common.exception.ResultException;
 
 /**
  * @author Mingcai SHEN
@@ -18,12 +18,12 @@ public class AsyncTaskRunnerImpl implements AsyncTaskRunner {
     private AsyncTaskContainer asyncTaskContainer;
 
     @Override
-    public AsyncTask make(AsyncRunnable runnable) throws RestletException {
+    public AsyncTask make(AsyncRunnable runnable) throws ResultException {
         return make(runnable, runnable.getClass().getName());
     }
 
     @Override
-    public AsyncTask make(AsyncRunnable runnable, String subject) throws RestletException {
+    public AsyncTask make(AsyncRunnable runnable, String subject) throws ResultException {
         AsyncTask t = asyncTaskContainer.make(runnable, subject);
         t.setStatus(1);
         asyncTaskContainer.set(t.getIdentity(), t);

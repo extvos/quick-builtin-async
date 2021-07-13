@@ -1,7 +1,7 @@
 package plus.extvos.builtin.async.service;
 
 import plus.extvos.builtin.async.dto.AsyncTask;
-import plus.extvos.restlet.exception.RestletException;
+import plus.extvos.common.exception.ResultException;
 
 /**
  * @author Mingcai SHEN
@@ -12,9 +12,9 @@ public interface AsyncTaskRunner {
      *
      * @param runnable task implemented AsyncRunnable
      * @return a AsyncTask instance
-     * @throws RestletException when error
+     * @throws ResultException when error
      */
-    AsyncTask make(AsyncRunnable runnable) throws RestletException;
+    AsyncTask make(AsyncRunnable runnable) throws ResultException;
 
     /**
      * Start a runnable task with a subject
@@ -22,9 +22,9 @@ public interface AsyncTaskRunner {
      * @param runnable task implemented AsyncRunnable
      * @param subject  of task
      * @return a AsyncTask instance
-     * @throws RestletException when error
+     * @throws ResultException when error
      */
-    AsyncTask make(AsyncRunnable runnable, String subject) throws RestletException;
+    AsyncTask make(AsyncRunnable runnable, String subject) throws ResultException;
 
     /**
      * start the async task

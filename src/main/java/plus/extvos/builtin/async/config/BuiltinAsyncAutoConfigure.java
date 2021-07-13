@@ -1,6 +1,5 @@
 package plus.extvos.builtin.async.config;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +18,6 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 @EntityScan("plus.extvos.builtin.async.entity")
-@MapperScan("plus.extvos.builtin.async.mapper")
 @ComponentScan(basePackages = "plus.extvos.builtin.async")
 public class BuiltinAsyncAutoConfigure {
 
