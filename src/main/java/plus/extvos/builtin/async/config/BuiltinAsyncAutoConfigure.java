@@ -36,7 +36,7 @@ public class BuiltinAsyncAutoConfigure {
                 .title("异步任务服务")
                 .description("Builtin Quartz services for generic use.")
                 .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
-                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-async.git")
+                .termsOfServiceUrl("https://github.com/extvos/quick-builtin-async.git")
                 .version(getClass().getPackage().getImplementationVersion())
                 .build())
             .select()
