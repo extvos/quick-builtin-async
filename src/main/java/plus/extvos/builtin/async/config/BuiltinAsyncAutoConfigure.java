@@ -1,6 +1,7 @@
 package plus.extvos.builtin.async.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -29,6 +30,7 @@ public class BuiltinAsyncAutoConfigure {
 
 
     @Bean
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "enabled", havingValue = "true")
     public Docket createAsyncDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("异步任务服务")
