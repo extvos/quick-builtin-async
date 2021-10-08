@@ -30,7 +30,7 @@ public class BuiltinAsyncAutoConfigure {
 
 
     @Bean
-    @ConditionalOnProperty(prefix = "spring.swagger", name = "enabled", havingValue = "true")
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "disabled", havingValue = "false", matchIfMissing = true)
     public Docket createAsyncDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("异步任务服务")
