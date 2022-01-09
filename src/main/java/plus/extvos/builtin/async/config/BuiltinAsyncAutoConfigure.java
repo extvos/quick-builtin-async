@@ -1,7 +1,7 @@
 package plus.extvos.builtin.async.config;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,7 +19,6 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 @EntityScan("plus.extvos.builtin.async.entity")
-@MapperScan("plus.extvos.builtin.async.mapper")
 @ComponentScan(basePackages = "plus.extvos.builtin.async")
 public class BuiltinAsyncAutoConfigure {
 
@@ -31,14 +30,15 @@ public class BuiltinAsyncAutoConfigure {
 
 
     @Bean
+    @ConditionalOnProperty(prefix = "spring.swagger", name = "disabled", havingValue = "false", matchIfMissing = true)
     public Docket createAsyncDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
             .groupName("异步任务服务")
             .apiInfo(new ApiInfoBuilder()
                 .title("异步任务服务")
                 .description("Builtin Quartz services for generic use.")
-                .contact(new Contact("Mingcai SHEN", "https://github.com/", "archsh@gmail.com"))
-                .termsOfServiceUrl("https://github.com/quickstart/java-scaffolds/quick-builtin-async.git")
+                .contact(new Contact("Mingcai SHEN", "https://github.com/archsh/", "archsh@gmail.com"))
+                .termsOfServiceUrl("https://github.com/extvos/quickstart/raw/develop/LICENSE")
                 .version(getClass().getPackage().getImplementationVersion())
                 .build())
             .select()
